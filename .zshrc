@@ -13,6 +13,9 @@ export PS1='%F{green}%~ %n %f'
 setopt HIST_IGNORE_DUPS
 
 alias ..='cd ..'
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
 alias a='./a.out'
 alias ca='conda activate'
 alias cda='conda deactivate'
