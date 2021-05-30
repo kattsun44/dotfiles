@@ -1,15 +1,10 @@
-HISTFILE=~/.zsh_history
-SAVEHIST=100
-
-eval "$(~/.anyenv/bin/anyenv init -)"
-export PATH="$HOME/.anyenv/bin:$PATH"
-
-#ojのパス
-export PATH="/home/kattsun/.local/bin:$PATH"
-
+# 見た目
 export PS1='%F{green}%~ %n %f'
 
-#直前のコマンドと同じなら、履歴に残さない
+# 履歴
+HISTFILE=~/.zsh_history
+SAVEHIST=100
+# 直前のコマンドと同じなら、履歴に残さない
 setopt HIST_IGNORE_DUPS
 
 alias ..='cd ..'
@@ -36,3 +31,17 @@ alias v='vim'
 alias ojtp='oj t -c "python3 main.py"'
 alias ojsp='oj s main.py'
 alias ojspp='oj s --guess-python-interpreter pypy main.py'
+
+case ${OSTYPE} in
+    darwin*)
+        echo "Running on OSX"
+        source dotfiles/.zshrc.osx
+        ;;
+    linux*)
+        echo "Running on Linux"
+        source dotfiles/.zshrc.linux
+esac
+
+if [ -f ~/.zshrc.local ]; then
+    source ~/.zshrc.local
+fi
