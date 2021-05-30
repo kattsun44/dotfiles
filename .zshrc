@@ -35,11 +35,11 @@ alias ojspp='oj s --guess-python-interpreter pypy main.py'
 case ${OSTYPE} in
     darwin*)
         echo "Running on OSX"
-        source dotfiles/.zshrc.osx
+        source ~/dotfiles/.zshrc.osx
         ;;
     linux*)
         echo "Running on Linux"
-        source dotfiles/.zshrc.linux
+        source ~/dotfiles/.zshrc.linux
 esac
 
 if [ -f ~/.zshrc.local ]; then
