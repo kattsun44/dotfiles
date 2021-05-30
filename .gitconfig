@@ -1,0 +1,19 @@
+[include]
+	path = ~/.gitconfig.local
+
+[alias]
+	st = status
+	b = branch
+	co = checkout
+	cm = commit -m
+	a  = add
+	aa = add -A
+	ps = push origin
+	pl = pull origin
+	
+[http]
+	postBuffer = 524288000
+[credential]
+	helper = osxkeychain
+[core]
+	quotepath = false
