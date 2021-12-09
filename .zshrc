@@ -35,7 +35,8 @@ alias md="mkdir"
 alias py="python3.8"
 alias src="source"
 
-alias v="vim"
+alias vi="nvim"
+alias vim="nvim"
 alias nv="nvim"
 alias view="nvim -R"
 
