@@ -17,3 +17,5 @@
 	helper = osxkeychain
 [core]
 	quotepath = false
+[push]
+	default = current

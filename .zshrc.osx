@@ -15,13 +15,17 @@ export RBENV_ROOT=$(brew --prefix rbenv)
 export PATH=$RBENV_ROOT/bin:$PATH
 eval "$(rbenv init -)"
 
-export RBENV_ROOT=$(brew --prefix rbenv) 
-export PATH=$RBENV_ROOT/bin:$PATH
-eval "$(rbenv init -)"
-
 export OPENSSL_ROOT=$(brew --prefix openssl)
 export PATH="$OPENSSL_ROOT/bin:$PATH"
 export LDFLAGS="-L$OPENSSL_ROOT/lib"
 export CPPFLAGS="-I$OPENSSL_ROOT/include"
 export PKG_CONFIG_PATH="$OPENSSL_ROOT/lib/pkgconfig"
-export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$OPENSSL_ROOT" 
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$OPENSSL_ROOT"
+
+# === GO ===
+export GOENV_ROOT=$HOME/.goenv
+export PATH=$GOENV_ROOT/bin:$PATH
+eval "$(goenv init -)"
+
+# === PostgresQL ===
+export PGDATA='/opt/homebrew/bin/postgres'
