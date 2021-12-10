@@ -8,6 +8,16 @@ setopt HIST_IGNORE_DUPS # 直前のコマンドと同じなら、履歴に残さ
 setopt share_history # 他のzshで履歴を共有する
 setopt inc_append_history # 即座に履歴を保存する
 
+# sshホスト名を補完
+autoload -U compinit && compinit
+
+function print_known_hosts (){
+    if [ -f $HOME/.ssh/known_hosts ]; then
+        cat $HOME/.ssh/known_hosts | tr ',' ' ' | cut -d' ' -f1
+    fi
+}
+_cache_hosts=($( print_known_hosts ))
+
 ##### alias #####
 alias ..="cd .."
 alias ...="cd ../.."
