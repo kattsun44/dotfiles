@@ -25,6 +25,7 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias a="./a.out"
 alias md="mkdir"
+alias cl="clear"
 
 # anaconda
 alias ca="conda activate"
@@ -59,8 +60,8 @@ alias ojspp="oj s --guess-python-interpreter pypy main.py"
 
 case ${OSTYPE} in
     darwin*)
-        echo "Running on OSX"
-        source ~/dotfiles/.zshrc.osx
+        echo "Running on macOS"
+        source ~/dotfiles/.zshrc.macos
         ;;
     linux*)
         echo "Running on Linux"
