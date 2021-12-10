@@ -74,3 +74,4 @@ esac
 if [ -f ~/.zshrc.local ]; then
     source ~/.zshrc.local
 fi
+test -e /Users/kattsun/.iterm2_shell_integration.zsh && source /Users/kattsun/.iterm2_shell_integration.zsh || true

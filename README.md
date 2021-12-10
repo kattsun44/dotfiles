@@ -8,3 +8,7 @@ zsh link.sh
 ```
 source ~/.zshrc
 ```
+`.tmux.conf` の即時反映
+```
+tmux source ~/.tmux.conf
+```
