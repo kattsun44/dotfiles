@@ -5,6 +5,8 @@ export PS1="%F{green}%~ %n %f"
 HISTFILE=~/.zsh_history
 SAVEHIST=100
 setopt HIST_IGNORE_DUPS # 直前のコマンドと同じなら、履歴に残さない
+setopt share_history # 他のzshで履歴を共有する
+setopt inc_append_history # 即座に履歴を保存する
 
 ##### alias #####
 alias ..="cd .."
