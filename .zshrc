@@ -91,6 +91,7 @@ alias gdf="git diff"
 
 alias py="python3"
 alias src="source"
+alias ssh="~/bin/ssh-with-change-bgc.sh"
 
 alias vi="nvim"
 alias vim="nvim"
