@@ -10,6 +10,7 @@ syntax on
 
 call plug#begin()
 Plug 'preservim/nerdtree'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 call plug#end()
 
 " Start NERDTree when Vim is started without file arguments.
