@@ -20,6 +20,9 @@ for f in .??*; do
     ln -snfv ~/dotfiles/"$f" ~/
 done
 
+# home/binディレクトリのシンボリックリンク
+ln -snfv ~/dotfiles/bin ~/bin
+
 source ~/.zshrc
 tmux source ~/.tmux.conf
 
