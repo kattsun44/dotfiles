@@ -64,6 +64,7 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias a="./a.out"
+alias his="history | grep"
 alias md="mkdir"
 alias cl="clear"
 
