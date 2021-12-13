@@ -2,7 +2,7 @@
 export PS1="%F{green}%~ %n %f"
 
 # git ブランチ名を色付きで表示させるメソッド
-function rprompt-git-current-branch {
+function rprompt_git_current_branch {
   local branch_name st branch_status
  
   if [ ! -e  ".git" ]; then
@@ -39,7 +39,7 @@ function rprompt-git-current-branch {
 setopt prompt_subst
  
 # プロンプトの右側にメソッドの結果を表示させる
-RPROMPT='`rprompt-git-current-branch`'
+RPROMPT='`rprompt_git_current_branch`'
 
 # tmuxのペイン背景色変更
 function ssh() {
