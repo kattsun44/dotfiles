@@ -82,6 +82,7 @@ function print_known_hosts (){
 _cache_hosts=($( print_known_hosts ))
 
 ##### alias #####
+alias ,="cd -"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
