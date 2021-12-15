@@ -13,7 +13,7 @@ export PATH="/Users/kattsun/Library/Python/3.8/bin/:$PATH"
 # === Ruby ===
 export RBENV_ROOT=$(brew --prefix rbenv) 
 export PATH=$RBENV_ROOT/bin:$PATH
-export PATH=$HOME/.rbenv/bin:$PATH
+export PATH=$HOME/.rbenv/shims:$PATH
 eval "$(rbenv init -)"
 
 export OPENSSL_ROOT=$(brew --prefix openssl)
