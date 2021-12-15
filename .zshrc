@@ -147,3 +147,6 @@ test -e /Users/kattsun/.iterm2_shell_integration.zsh && source /Users/kattsun/.i
 
 # Ruby3.0インストール用
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+
+# 重複パス削除 https://orebibou.com/ja/home/202101/20210104_001/
+export PATH=$(printf %s "$PATH" | awk -v RS=: -v ORS=: '!arr[$0]++')
