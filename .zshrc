@@ -91,6 +91,7 @@ alias a="./a.out"
 alias his="history | grep"
 alias md="mkdir"
 alias cl="clear"
+alias path="echo $PATH | tr ':' '\n'"
 
 # anaconda
 alias ca="conda activate"
@@ -142,3 +143,6 @@ if [ -f ~/.zshrc.local ]; then
     source ~/.zshrc.local
 fi
 test -e /Users/kattsun/.iterm2_shell_integration.zsh && source /Users/kattsun/.iterm2_shell_integration.zsh || true
+
+# Ruby3.0インストール用
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
