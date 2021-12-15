@@ -29,3 +29,4 @@ eval "$(goenv init -)"
 
 # === PostgresQL ===
 export PGDATA='/opt/homebrew/bin/postgres'
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
