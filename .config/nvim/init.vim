@@ -17,3 +17,6 @@ call plug#end()
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
 
+"ノーマルモードのまま空行を挿入"
+nnoremap O :<C-u>call append(expand('.'), '')<Cr>j
+
