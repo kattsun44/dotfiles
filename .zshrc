@@ -1,5 +1,5 @@
 ##### 見た目 #####
-export PS1="%F{green}[%D{%Y/%m/%d} %*]%. %n %f"
+export PS1="%F{green}[%D{%Y/%m/%d} %*]%. %f"
 
 # git ブランチ名を色付きで表示させるメソッド
 function rprompt_git_current_branch {
