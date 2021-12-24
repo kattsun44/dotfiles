@@ -98,9 +98,11 @@ alias ca="conda activate"
 alias cda="conda deactivate"
 
 # git
+function g () {
+    [[ $# -eq 0 ]] && git status || git "$@"
+}
 alias aliasgit="alias | grep git"
 alias gitalias="aliasgit"
-alias g="git"
 alias ga="git add"
 alias gaa="git add -A"
 alias gb="git branch"
