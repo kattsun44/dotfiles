@@ -93,6 +93,7 @@ alias md="mkdir"
 alias cl="clear"
 alias path="echo $PATH | tr ':' '\n'"
 alias ls="ls -a"
+alias ll="ls -la"
 
 # anaconda
 alias ca="conda activate"
