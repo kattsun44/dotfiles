@@ -13,3 +13,6 @@ export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 
 # === anyenv ===
 eval "$(anyenv init -)"
+
+# === online-judge-tools ===
+export PATH="/Users/kattsun/Library/Python/3.8/bin:$PATH"
