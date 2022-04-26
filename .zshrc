@@ -1,5 +1,4 @@
 ##### 見た目 #####
-export PS1="%F{green}[%D{%Y/%m/%d} %*]%. %f"
 
 # git ブランチ名を色付きで表示させるメソッド
 function rprompt_git_current_branch {
@@ -7,7 +6,7 @@ function rprompt_git_current_branch {
  
   if [ ! -e  ".git" ]; then
     # git 管理されていないディレクトリは何も返さない
-    return
+    branch_name=""
   fi
   branch_name=`git rev-parse --abbrev-ref HEAD 2> /dev/null`
   st=`git status 2> /dev/null`
@@ -38,8 +37,7 @@ function rprompt_git_current_branch {
 # プロンプトが表示されるたびにプロンプト文字列を評価、置換する
 setopt prompt_subst
  
-# プロンプトの右側にメソッドの結果を表示させる
-RPROMPT='`rprompt_git_current_branch`'
+PROMPT=$'%F{green}[%D{%Y/%m/%d} %*] %U%~%u%f `rprompt_git_current_branch` %F{green}%f \n%n %# '
 
 # tmuxのペイン背景色変更
 function ssh() {
