@@ -64,7 +64,7 @@ function ssh() {
 
 ##### 履歴 #####
 HISTFILE=~/.zsh_history
-SAVEHIST=10000
+SAVEHIST=50000
 setopt HIST_IGNORE_DUPS # 直前のコマンドと同じなら、履歴に残さない
 setopt share_history # 他のzshで履歴を共有する
 setopt inc_append_history # 即座に履歴を保存する
