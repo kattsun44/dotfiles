@@ -113,8 +113,10 @@ alias gf="git fetch"
 alias glog="git log"
 alias glogf="git log --follow"
 alias gm="git merge"
-alias gpl="git pull origin"
-alias gps="git push origin"
+alias gpl="git pull"
+alias gplo="git pull origin"
+alias gps="git push"
+alias gpso="git push origin"
 alias gpfs="git push -f origin"
 alias gst="git status"
 alias gdf="git diff"
@@ -133,6 +135,7 @@ alias ojtp="oj t -c "python3 main.py""
 alias ojsp="oj s main.py"
 alias ojspp="oj s --guess-python-interpreter pypy main.py"
 
+# OSがLinuxかMacOSかで読み込むファイルを変更
 case ${OSTYPE} in
     darwin*)
         echo "Running on macOS"
