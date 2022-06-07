@@ -1,7 +1,7 @@
 ##### 見た目 #####
 
 # git ブランチ名を色付きで表示させるメソッド
-function rprompt_git_current_branch {
+function git_current_branch {
   local branch_name st branch_status
  
   if [ ! -e  ".git" ]; then
@@ -37,7 +37,7 @@ function rprompt_git_current_branch {
 # プロンプトが表示されるたびにプロンプト文字列を評価、置換する
 setopt prompt_subst
  
-PROMPT=$'%F{green}[%D{%Y/%m/%d} %*] %U%~%u%f `rprompt_git_current_branch` %F{green}%f \n%n %# '
+PROMPT=$'%F{green}[%D{%Y/%m/%d} %*] %U%~%u%f `git_current_branch` %F{green}%f \n%n %# '
 
 # tmuxのペイン背景色変更
 function ssh() {
