@@ -1,7 +1,7 @@
 ##### 見た目 #####
 
 # git ブランチ名を色付きで表示させるメソッド
-function rprompt_git_current_branch {
+function git_current_branch {
   local branch_name st branch_status
  
   if [ ! -e  ".git" ]; then
@@ -37,7 +37,7 @@ function rprompt_git_current_branch {
 # プロンプトが表示されるたびにプロンプト文字列を評価、置換する
 setopt prompt_subst
  
-PROMPT=$'%F{green}[%D{%Y/%m/%d} %*] %U%~%u%f `rprompt_git_current_branch` %F{green}%f \n%n %# '
+PROMPT=$'%F{green}[%D{%Y/%m/%d} %*] %U%~%u%f `git_current_branch` %F{green}%f \n%n %# '
 
 # tmuxのペイン背景色変更
 function ssh() {
@@ -64,7 +64,7 @@ function ssh() {
 
 ##### 履歴 #####
 HISTFILE=~/.zsh_history
-SAVEHIST=10000
+SAVEHIST=50000
 setopt HIST_IGNORE_DUPS # 直前のコマンドと同じなら、履歴に残さない
 setopt share_history # 他のzshで履歴を共有する
 setopt inc_append_history # 即座に履歴を保存する
@@ -113,8 +113,10 @@ alias gf="git fetch"
 alias glog="git log"
 alias glogf="git log --follow"
 alias gm="git merge"
-alias gpl="git pull origin"
-alias gps="git push origin"
+alias gpl="git pull"
+alias gplo="git pull origin"
+alias gps="git push"
+alias gpso="git push origin"
 alias gpfs="git push -f origin"
 alias gst="git status"
 alias gdf="git diff"
@@ -133,6 +135,7 @@ alias ojtp="oj t -c "python3 main.py""
 alias ojsp="oj s main.py"
 alias ojspp="oj s --guess-python-interpreter pypy main.py"
 
+# OSがLinuxかMacOSかで読み込むファイルを変更
 case ${OSTYPE} in
     darwin*)
         echo "Running on macOS"
