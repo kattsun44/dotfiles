@@ -93,6 +93,9 @@ alias cl="clear"
 alias path="echo $PATH | tr ':' '\n'"
 alias ls="ls -a"
 alias ll="ls -la"
+alias sl="ls"
+alias esit="exit"
+alias xit="exit"
 
 # anaconda
 alias ca="conda activate"
