@@ -79,12 +79,13 @@ function print_known_hosts (){
 }
 _cache_hosts=($( print_known_hosts ))
 
-# fzf で絞り込んで選択した過去コマンドを (改行を削除して) コピーする関数
-function hiscopy (){
-  history -n -r 1 | fzf | tr -d '\n' | pbcopy
+# fzf で絞り込んで選択した過去コマンドを (改行を削除して) コマンドラインに展開する関数
+function fzf-select-history (){
+  BUFFER=$(history -n -r 1 | fzf | tr -d '\n')
+  CURSOR=$#BUFFER
 }
-zle -N hiscopy
-bindkey '^r' hiscopy
+zle -N fzf-select-history
+bindkey '^r' fzf-select-history
 
 ##### alias #####
 alias ,="cd -"
