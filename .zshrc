@@ -79,6 +79,13 @@ function print_known_hosts (){
 }
 _cache_hosts=($( print_known_hosts ))
 
+# fzf で絞り込んで選択した過去コマンドを (改行を削除して) コピーする関数
+function hiscopy (){
+  history -n -r 1 | fzf | tr -d '\n' | pbcopy
+}
+zle -N hiscopy
+bindkey '^r' hiscopy
+
 ##### alias #####
 alias ,="cd -"
 alias ..="cd .."
@@ -88,7 +95,6 @@ alias .....="cd ../../../.."
 alias a="./a.out"
 alias cp="cp -v"
 alias his="history | grep"
-alias hiscopy="history -n -r 1 | fzf | tr -d '\n' | pbcopy"
 alias md="mkdir"
 alias cl="clear"
 alias path="echo $PATH | tr ':' '\n'"
