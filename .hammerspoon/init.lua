@@ -6,4 +6,5 @@ spoon.ShiftIt:bindHotkeys({
     down = {{ 'ctrl', 'shift', 'cmd' }, 'down' },
     maximum = {{ 'ctrl', 'shift', 'cmd' }, 'up' },
     nextScreen = {{ 'ctrl', 'shift', 'cmd' }, 'n' },
+    previousScreen = {{ 'ctrl', 'shift', 'cmd' }, 'p' },
 });
