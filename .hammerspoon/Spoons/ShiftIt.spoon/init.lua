@@ -124,8 +124,8 @@ function obj:maximum() move(units.maximum, nil, true, 0) end
 function obj:toggleFullScreen() hs.window.focusedWindow():toggleFullScreen() end
 function obj:toggleZoom() hs.window.focusedWindow():toggleZoom() end
 function obj:center() hs.window.focusedWindow():centerOnScreen(nil, true, 0) end
-function obj:nextScreen() hs.window.focusedWindow():moveToScreen(hs.window.focusedWindow():screen():next(),false, true, 0) end
-function obj:previousScreen() hs.window.focusedWindow():moveToScreen(hs.window.focusedWindow():screen():previous(),false, true, 0) end
+function obj:nextScreen() hs.window.focusedWindow():moveToScreen(hs.window.focusedWindow():screen():next(),true, true, 0) end
+function obj:previousScreen() hs.window.focusedWindow():moveToScreen(hs.window.focusedWindow():screen():previous(),true, true, 0) end
 
 function obj:resizeOut() resizeWindowInSteps(true) end
 function obj:resizeIn() resizeWindowInSteps(false) end
