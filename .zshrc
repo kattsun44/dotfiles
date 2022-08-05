@@ -138,7 +138,6 @@ alias src="source"
 #alias ssh="~/bin/ssh-with-change-bgc.sh"
 
 alias vi="nvim"
-alias vim="nvim"
 alias nv="nvim"
 alias view="nvim -R"
 
