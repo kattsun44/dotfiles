@@ -88,11 +88,12 @@ zle -N fzf-select-history
 bindkey '^r' fzf-select-history
 
 ##### alias #####
-alias ,="cd -"
+alias .="cd -"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
+alias -g C="| pbcopy"
 alias a="./a.out"
 alias cp="cp -v"
 alias his="history | grep"
@@ -130,8 +131,6 @@ alias gpl="git pull"
 alias gplo="git pull origin"
 alias gps="git push"
 alias gpso="git push origin"
-alias gpfs="git push -f origin"
-alias gst="git status"
 alias gdf="git diff"
 
 alias py="python3"
