@@ -88,7 +88,7 @@ zle -N fzf-select-history
 bindkey '^r' fzf-select-history
 
 ##### alias #####
-alias .="cd -"
+alias -- -="cd -"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
