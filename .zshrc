@@ -169,3 +169,9 @@ export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 export PATH=$(printf %s "$PATH" | awk -v RS=: -v ORS=: '!arr[$0]++')
 
 eval TWILIO_AC_ZSH_SETUP_PATH=/Users/yoshihiro.katsuhara/.twilio-cli/autocomplete/zsh_setup && test -f $TWILIO_AC_ZSH_SETUP_PATH && source $TWILIO_AC_ZSH_SETUP_PATH; # twilio autocomplete setup
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/kattsun/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/kattsun/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/kattsun/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/kattsun/google-cloud-sdk/completion.zsh.inc'; fi
