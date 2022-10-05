@@ -105,6 +105,7 @@ alias ll="ls -lA"
 alias sl="ls"
 alias esit="exit"
 alias xit="exit"
+alias mux="tmuxinator"
 
 # anaconda
 alias ca="conda activate"
