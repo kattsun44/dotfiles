@@ -120,28 +120,37 @@ alias cda="conda deactivate"
 function g () {
     [[ $# -eq 0 ]] && git status || git "$@"
 }
-alias aliasgit="alias | grep git"
+alias aliasgit="alias | grep 'git '"
 alias gitalias="aliasgit"
+
 alias ga="git add"
 alias gaa="git add -A"
+
 alias gb="git branch"
-alias gco="git checkout"
-alias gcob="git checkout -b"
+
 alias gc="git commit -v"
-# alias gcm="git commit -m"
+alias gca="git commit -v --amend"
+
 alias gf="git fetch"
-alias glog="git log"
-alias glogf="git log --follow"
+alias gl="git log --stat"
+alias glo="git log --oneline"
 alias gm="git merge"
+
 alias gpl="git pull"
 alias gplo="git pull origin"
 alias gps="git push"
 alias gpso="git push origin"
-alias gdf="git diff"
+
+alias gd="git diff"
+alias gds="git diff --staged"
+
+alias gr="git rebase"
+alias gri="git rebase -i"
+alias gs="git switch"
+alias gsc="git switch -c"
 
 alias py="python3"
 alias src="source"
-#alias ssh="~/bin/ssh-with-change-bgc.sh"
 
 alias vi="nvim"
 alias nv="nvim"
@@ -175,3 +184,9 @@ export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 export PATH=$(printf %s "$PATH" | awk -v RS=: -v ORS=: '!arr[$0]++')
 
 eval TWILIO_AC_ZSH_SETUP_PATH=/Users/yoshihiro.katsuhara/.twilio-cli/autocomplete/zsh_setup && test -f $TWILIO_AC_ZSH_SETUP_PATH && source $TWILIO_AC_ZSH_SETUP_PATH; # twilio autocomplete setup
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/kattsun/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/kattsun/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/kattsun/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/kattsun/google-cloud-sdk/completion.zsh.inc'; fi
