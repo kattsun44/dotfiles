@@ -106,6 +106,11 @@ alias sl="ls"
 alias esit="exit"
 alias xit="exit"
 alias mux="tmuxinator"
+alias sed="gsed"
+
+# docker
+alias dc="docker compose"
+alias dce="docker compose exec"
 
 # anaconda
 alias ca="conda activate"
