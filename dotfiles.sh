@@ -18,11 +18,11 @@ for f in .??*; do
     [ "$f" = ".zshrc.linux" ] && continue
     [ "$f" = ".zshrc.macos" ] && continue
 
-    ln -snfv ~/dotfiles/"$f" ~/
+    ln -snfv ~/ghq/github.com/kattsun44/dotfiles/"$f" ~/
 done
 
 # home/binディレクトリのシンボリックリンク
-ln -snfv ~/dotfiles/bin ~/bin
+ln -snfv ~/ghq/github.com/kattsun44/dotfiles/bin ~/bin
 
 source ~/.zshrc
 tmux source ~/.tmux.conf
