@@ -37,7 +37,7 @@ function git_current_branch {
 # プロンプトが表示されるたびにプロンプト文字列を評価、置換する
 setopt prompt_subst
  
-PROMPT=$'%F{green}[%D{%Y/%m/%d} %*] %U%~%u%f `git_current_branch` %F{green}%f \n%n %# '
+PROMPT=$'%F{green}[%D{%Y/%m/%d} %*] %U%~%u%f `git_current_branch` %F{green}%f \n%n\n%# '
 
 # tmuxのペイン背景色変更
 function ssh() {
