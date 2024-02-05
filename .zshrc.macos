@@ -21,4 +21,3 @@ export PATH="/Users/kattsun/Library/Python/3.8/bin:$PATH"
 
 # === zsh-abbr ===
 source /opt/homebrew/share/zsh-abbr/zsh-abbr.zsh
-source /usr/local/share/zsh-abbr/zsh-abbr.zsh
