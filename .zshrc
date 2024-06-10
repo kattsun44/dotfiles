@@ -88,11 +88,6 @@ zle -N fzf-select-history
 bindkey '^r' fzf-select-history
 
 ##### alias #####
-alias -- -="cd -"
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
 alias -g C="| pbcopy"
 alias a="./a.out"
 alias cp="cp -v"
@@ -101,16 +96,10 @@ alias md="mkdir"
 alias cl="clear"
 alias path="echo $PATH | tr ':' '\n'"
 alias ls="ls -A"
-alias ll="ls -lA"
 alias sl="ls"
 alias esit="exit"
 alias xit="exit"
-alias mux="tmuxinator"
 alias sed="gsed"
-
-# docker
-alias dc="docker compose"
-alias dce="docker compose exec"
 
 # anaconda
 alias ca="conda activate"
@@ -122,35 +111,10 @@ function g () {
 }
 alias aliasgit="alias | grep 'git '"
 alias gitalias="aliasgit"
-
-alias ga="git add"
-alias gaa="git add -A"
-
-alias gb="git branch"
-
-alias gc="git commit -v"
-alias gca="git commit -v --amend"
-
-alias gf="git fetch"
-alias gl="git log --stat"
-alias glo="git log --oneline"
-alias gm="git merge"
-
-alias gpl="git pull"
-alias gplo="git pull origin"
-alias gps="git push"
-alias gpso="git push origin"
-
-alias gd="git diff"
-alias gds="git diff --staged"
-
-alias gr="git rebase"
 alias gri="git rebase -i"
-alias gs="git switch"
 alias gsc="git switch -c"
 
 alias py="python3"
-alias src="source"
 
 alias vi="nvim"
 alias nv="nvim"
