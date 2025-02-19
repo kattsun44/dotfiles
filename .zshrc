@@ -125,6 +125,9 @@ alias ojtp="oj t -c "python3 main.py""
 alias ojsp="oj s main.py"
 alias ojspp="oj s --guess-python-interpreter pypy main.py"
 
+# 2024/01/30 Homebrew 用のパスを指定
+export PATH=/opt/homebrew/bin:$PATH
+
 # OSがLinuxかMacOSかで読み込むファイルを変更
 case ${OSTYPE} in
     darwin*)
