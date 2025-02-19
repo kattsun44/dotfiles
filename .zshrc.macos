@@ -14,13 +14,18 @@ export PGDATA='/opt/homebrew/bin/postgres'
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 
 # === anyenv ===
-eval "$(anyenv init -)"
+# eval "$(anyenv init -)"
 
 # === online-judge-tools ===
-export PATH="/Users/kattsun/Library/Python/3.8/bin:$PATH"
+export PATH="/Users/kattsun/Library/Python/3.13/bin:$PATH"
 
 # === zsh-abbr ===
 source /opt/homebrew/share/zsh-abbr/zsh-abbr.zsh
 
 # === asdf installed by brew ===
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
+# . /opt/homebrew/opt/asdf/libexec/asdf.sh # v0.15
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH" # v0.16
+
+# === Go packages ===
+export GOPATH=$(go env GOPATH)
+export PATH=$PATH:$GOPATH/bin
