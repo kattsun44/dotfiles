@@ -1,6 +1,9 @@
 [include]
 	path = ~/.gitconfig.local
 
+[includeIf "gitdir:~/ghq/github.com/kattsun44/"]
+	path = ~/.gitconfig_sub
+
 [alias]
 	st = status
 	b = branch
