@@ -13,7 +13,7 @@
 	aa = add -A
 	ps = push origin
 	pl = pull origin
-	
+
 [http]
 	postBuffer = 524288000
 [credential]
@@ -22,3 +22,6 @@
 	quotepath = false
 [push]
 	default = current
+[init]
+	defaultBranch = main
+
