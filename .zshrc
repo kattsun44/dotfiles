@@ -87,43 +87,10 @@ function fzf-select-history (){
 zle -N fzf-select-history
 bindkey '^r' fzf-select-history
 
-##### alias #####
-alias -g C="| pbcopy"
-alias a="./a.out"
-alias cp="cp -v"
-alias his="history | grep"
-alias md="mkdir"
-alias cl="clear"
-alias path="echo $PATH | tr ':' '\n'"
-alias ls="ls -A"
-alias sl="ls"
-alias esit="exit"
-alias xit="exit"
-alias sed="gsed"
-
-# anaconda
-alias ca="conda activate"
-alias cda="conda deactivate"
-
 # git
 function g () {
     [[ $# -eq 0 ]] && git status || git "$@"
 }
-alias aliasgit="alias | grep 'git '"
-alias gitalias="aliasgit"
-alias gri="git rebase -i"
-alias gsc="git switch -c"
-
-alias py="python3"
-
-alias vi="nvim"
-alias nv="nvim"
-alias view="nvim -R"
-
-# online-judge-tools
-alias ojtp="oj t -c "python3 main.py""
-alias ojsp="oj s main.py"
-alias ojspp="oj s --guess-python-interpreter pypy main.py"
 
 # 2024/01/30 Homebrew 用のパスを指定
 export PATH=/opt/homebrew/bin:$PATH
