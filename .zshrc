@@ -3,7 +3,7 @@
 # git ブランチ名を色付きで表示させるメソッド
 function git_current_branch {
   local branch_name st branch_status
- 
+
   if [ ! -e  ".git" ]; then
     # git 管理されていないディレクトリは何も返さない
     branch_name=""
@@ -33,32 +33,32 @@ function git_current_branch {
   # ブランチ名を色付きで表示する
   echo "${branch_status}[$branch_name]"
 }
- 
+
 # プロンプトが表示されるたびにプロンプト文字列を評価、置換する
 setopt prompt_subst
- 
+
 PROMPT=$'%F{green}[%D{%Y/%m/%d} %*] %U%~%u%f `git_current_branch` %F{green}%f \n%n\n%# '
 
 # tmuxのペイン背景色変更
 function ssh() {
   # tmux起動時
   if [[ -n $(printenv TMUX) ]] ; then
-      # 現在のペインIDを記録
-      local pane_id=$(tmux display -p '#{pane_id}')
-      # 接続先ホスト名に応じて背景色を切り替え
-      if [[ `echo $1 | grep 'prod'` ]] ; then
-          tmux select-pane -P 'bg=colour52,fg=white'
-      elif [[ `echo $1 | grep 'stg'` ]] ; then
-          tmux select-pane -P 'bg=colour25,fg=white'
-      fi
+    # 現在のペインIDを記録
+    local pane_id=$(tmux display -p '#{pane_id}')
+    # 接続先ホスト名に応じて背景色を切り替え
+    if [[ `echo $1 | grep 'prod'` ]] ; then
+        tmux select-pane -P 'bg=colour52,fg=white'
+    elif [[ `echo $1 | grep 'stg'` ]] ; then
+        tmux select-pane -P 'bg=colour25,fg=white'
+    fi
 
-      # 通常通りssh続行
-      command ssh $@
+    # 通常通りssh続行
+    command ssh $@
 
-      # デフォルトの背景色に戻す
-      tmux select-pane -t $pane_id -P 'default'
+    # デフォルトの背景色に戻す
+    tmux select-pane -t $pane_id -P 'default'
   else
-      command ssh $@
+    command ssh $@
   fi
 }
 
@@ -73,9 +73,9 @@ setopt inc_append_history # 即座に履歴を保存する
 autoload -U compinit && compinit
 
 function print_known_hosts (){
-    if [ -f $HOME/.ssh/known_hosts ]; then
-        cat $HOME/.ssh/known_hosts | tr ',' ' ' | cut -d' ' -f1
-    fi
+  if [ -f $HOME/.ssh/known_hosts ]; then
+    cat $HOME/.ssh/known_hosts | tr ',' ' ' | cut -d' ' -f1
+  fi
 }
 _cache_hosts=($( print_known_hosts ))
 
@@ -97,13 +97,13 @@ export PATH=/opt/homebrew/bin:$PATH
 
 # OSがLinuxかMacOSかで読み込むファイルを変更
 case ${OSTYPE} in
-    darwin*)
-        echo "Running on macOS"
-        source ~/ghq/github.com/kattsun44/dotfiles/.zshrc.macos
-        ;;
-    linux*)
-        echo "Running on Linux"
-        source ~/ghq/github.com/kattsun44/dotfiles/.zshrc.linux
+  darwin*)
+    echo "Running on macOS"
+    source ~/ghq/github.com/kattsun44/dotfiles/.zshrc.macos
+    ;;
+  linux*)
+    echo "Running on Linux"
+    source ~/ghq/github.com/kattsun44/dotfiles/.zshrc.linux
 esac
 
 if [ -f ~/.zshrc.local ]; then
