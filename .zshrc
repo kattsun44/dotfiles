@@ -99,11 +99,11 @@ export PATH=/opt/homebrew/bin:$PATH
 case ${OSTYPE} in
   darwin*)
     echo "Running on macOS"
-    source ~/ghq/github.com/kattsun44/dotfiles/.zshrc.macos
+    source ./.zsh/macos.zsh
     ;;
   linux*)
     echo "Running on Linux"
-    source ~/ghq/github.com/kattsun44/dotfiles/.zshrc.linux
+    source ./.zsh/linux.zsh
 esac
 
 if [ -f ~/.zshrc.local ]; then
