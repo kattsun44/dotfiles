@@ -11,6 +11,7 @@ setopt share_history # 他のzshで履歴を共有する
 setopt inc_append_history # 即座に履歴を保存する
 
 # sshホスト名を補完
+# ref: https://masudak.hatenablog.jp/entry/20121208/1354977070
 autoload -U compinit && compinit
 
 function print_known_hosts (){
