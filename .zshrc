@@ -1,6 +1,6 @@
-source ./.zsh/history.zsh
-source ./.zsh/prompt.zsh
-source ./.zsh/tmux.zsh
+source ~/.zsh/history.zsh
+source ~/.zsh/prompt.zsh
+source ~/.zsh/tmux.zsh
 
 # sshホスト名を補完
 # ref: https://masudak.hatenablog.jp/entry/20121208/1354977070
@@ -33,11 +33,11 @@ export PATH=/opt/homebrew/bin:$PATH
 case ${OSTYPE} in
   darwin*)
     echo "Running on macOS"
-    source ./.zsh/macos.zsh
+    source ~/.zsh/macos.zsh
     ;;
   linux*)
     echo "Running on Linux"
-    source ./.zsh/linux.zsh
+    source ~/.zsh/linux.zsh
 esac
 
 if [ -f ~/.zshrc.local ]; then
