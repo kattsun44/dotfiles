@@ -50,7 +50,7 @@ esac
 if [ -f ~/.zshrc.local ]; then
     source ~/.zshrc.local
 fi
-test -e /Users/kattsun/.iterm2_shell_integration.zsh && source /Users/kattsun/.iterm2_shell_integration.zsh || true
+test -e $HOME/.iterm2_shell_integration.zsh && source $HOME/.iterm2_shell_integration.zsh || true
 
 # Ruby3.0インストール用
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
@@ -58,10 +58,10 @@ export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 # 重複パス削除 https://orebibou.com/ja/home/202101/20210104_001/
 export PATH=$(printf %s "$PATH" | awk -v RS=: -v ORS=: '!arr[$0]++')
 
-eval TWILIO_AC_ZSH_SETUP_PATH=/Users/yoshihiro.katsuhara/.twilio-cli/autocomplete/zsh_setup && test -f $TWILIO_AC_ZSH_SETUP_PATH && source $TWILIO_AC_ZSH_SETUP_PATH; # twilio autocomplete setup
+eval TWILIO_AC_ZSH_SETUP_PATH=$HOME/.twilio-cli/autocomplete/zsh_setup && test -f $TWILIO_AC_ZSH_SETUP_PATH && source $TWILIO_AC_ZSH_SETUP_PATH; # twilio autocomplete setup
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/kattsun/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/kattsun/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/path.zsh.inc"; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/kattsun/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/kattsun/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
