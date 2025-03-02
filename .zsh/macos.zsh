@@ -18,7 +18,7 @@ export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 # eval "$(anyenv init -)"
 
 # === online-judge-tools ===
-export PATH="/Users/kattsun/Library/Python/3.13/bin:$PATH"
+export PATH="$HOME/Library/Python/3.13/bin:$PATH"
 
 # === zsh-abbr ===
 source /opt/homebrew/share/zsh-abbr/zsh-abbr.zsh
