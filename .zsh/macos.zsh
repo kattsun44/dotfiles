@@ -30,3 +30,6 @@ export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH" # v0.16
 # === Go packages ===
 export GOPATH=$(go env GOPATH)
 export PATH=$PATH:$GOPATH/bin
+
+# === Claude Code ===
+export PATH="$HOME/.local/bin:$PATH"
