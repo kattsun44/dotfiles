@@ -1,7 +1,7 @@
 # プロンプトが表示されるたびにプロンプト文字列を評価、置換する
 setopt prompt_subst
 
-PROMPT=$'%F{green}[%D{%Y/%m/%d} %*] %U%~%u%f `git_current_branch` %F{green}%f \n%n\n%# '
+PROMPT=$'%F{green}[%D{%Y/%m/%d} %*] %U%~%u%f `git_current_branch` %F{green}%f <`git config user.name`>\n%n\n%# '
 
 # git ブランチ名を色付きで表示させるメソッド
 function git_current_branch {
